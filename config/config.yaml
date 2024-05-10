@@ -1,0 +1,29 @@
+ethereum:
+  rpc_url: "http://localhost:8545"
+  chain_id: 1
+  max_retries: 3
+  timeout_seconds: 30
+
+solana:
+  rpc_url: "http://localhost:8899"
+  max_retries: 3
+  timeout_seconds: 30
+
+simulation:
+  max_blocks: 100
+  max_slots: 100
+  workers: 4
+  strategies:
+    - arbitrage
+    - sandwich
+    - liquidation
+
+analysis:
+  min_profit_wei: "1000000000000000"
+  min_profit_lamports: 10000000
+  include_failed_txs: false
+  trace_depth: 3
+
+logging:
+  level: "info"
+  output: "stdout"
